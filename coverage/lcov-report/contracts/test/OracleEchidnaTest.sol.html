@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/test/OracleEchidnaTest.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">contracts/test/</a> OracleEchidnaTest.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/55</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/13</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/55</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier: UNLICENSED
+pragma solidity =0.7.6;
+pragma abicoder v2;
+&nbsp;
+import './OracleTest.sol';
+&nbsp;
+contract OracleEchidnaTest {
+    OracleTest private oracle;
+&nbsp;
+    bool private initialized;
+    uint32 private timePassed;
+&nbsp;
+<span class="fstat-no" title="function not covered" >    constructor() {</span>
+<span class="cstat-no" title="statement not covered" >        oracle = new OracleTest()</span>;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function initialize(</span>
+        uint32 time,
+        int24 tick,
+        uint128 liquidity
+    ) external {
+<span class="cstat-no" title="statement not covered" >        oracle.initialize(OracleTest.InitializeParams({time: time, tick: tick, liquidity: liquidity}))</span>;
+<span class="cstat-no" title="statement not covered" >        initialized = true</span>;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function limitTimePassed(uint32 by) private {</span>
+<span class="cstat-no" title="statement not covered" >        require(timePassed + by &gt;= timePassed)</span>;
+<span class="cstat-no" title="statement not covered" >        timePassed += by</span>;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function advanceTime(uint32 by) public {</span>
+<span class="cstat-no" title="statement not covered" >        limitTimePassed(by)</span>;
+<span class="cstat-no" title="statement not covered" >        oracle.advanceTime(by)</span>;
+    }
+&nbsp;
+    // write an observation, then change tick and liquidity
+<span class="fstat-no" title="function not covered" >    function update(</span>
+        uint32 advanceTimeBy,
+        int24 tick,
+        uint128 liquidity
+    ) external {
+<span class="cstat-no" title="statement not covered" >        limitTimePassed(advanceTimeBy)</span>;
+<span class="cstat-no" title="statement not covered" >        oracle.update(OracleTest.UpdateParams({advanceTimeBy: advanceTimeBy, tick: tick, liquidity: liquidity}))</span>;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function grow(uint16 cardinality) external {</span>
+<span class="cstat-no" title="statement not covered" >        oracle.grow(cardinality)</span>;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function checkTimeWeightedResultAssertions(uint32 secondsAgo0, uint32 secondsAgo1) private view {</span>
+<span class="cstat-no" title="statement not covered" >        require(secondsAgo0 != secondsAgo1)</span>;
+<span class="cstat-no" title="statement not covered" >        require(initialized)</span>;
+        // secondsAgo0 should be the larger one
+<span class="cstat-no" title="statement not covered" >        if (secondsAgo0 &lt; secondsAgo1) <span class="cstat-no" title="statement not covered" >(secondsAgo0, secondsAgo1) = (secondsAgo1, secondsAgo0)</span>;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        uint32 timeElapsed = secondsAgo0 - secondsAgo1;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        uint32[] memory secondsAgos = new uint32[](2);</span>
+<span class="cstat-no" title="statement not covered" >        secondsAgos[0] = secondsAgo0</span>;
+<span class="cstat-no" title="statement not covered" >        secondsAgos[1] = secondsAgo1</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        (int56[] memory tickCumulatives, uint160[] memory secondsPerLiquidityCumulativeX128s) =</span>
+            oracle.observe(secondsAgos);
+<span class="cstat-no" title="statement not covered" >        int56 timeWeightedTick = (tickCumulatives[1] - tickCumulatives[0]) / timeElapsed;</span>
+<span class="cstat-no" title="statement not covered" >        uint256 timeWeightedHarmonicMeanLiquidity =</span>
+            (uint256(timeElapsed) * type(uint160).max) /
+                (uint256(secondsPerLiquidityCumulativeX128s[1] - secondsPerLiquidityCumulativeX128s[0]) &lt;&lt; 32);
+<span class="cstat-no" title="statement not covered" >        assert(timeWeightedHarmonicMeanLiquidity &lt;= type(uint128).max)</span>;
+<span class="cstat-no" title="statement not covered" >        assert(timeWeightedTick &lt;= type(int24).max)</span>;
+<span class="cstat-no" title="statement not covered" >        assert(timeWeightedTick &gt;= type(int24).min)</span>;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function echidna_indexAlwaysLtCardinality() external view returns (bool) {</span>
+<span class="cstat-no" title="statement not covered" >        return oracle.index() &lt; oracle.cardinality() || !initialized;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function echidna_AlwaysInitialized() external view returns (bool) {</span>
+<span class="cstat-no" title="statement not covered" >        (, , , bool isInitialized) = oracle.observations(0);</span>
+<span class="cstat-no" title="statement not covered" >        return oracle.cardinality() == 0 || isInitialized;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function echidna_cardinalityAlwaysLteNext() external view returns (bool) {</span>
+<span class="cstat-no" title="statement not covered" >        return oracle.cardinality() &lt;= oracle.cardinalityNext();</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function echidna_canAlwaysObserve0IfInitialized() external view returns (bool) {</span>
+<span class="cstat-no" title="statement not covered" >        if (!initialized) {</span>
+<span class="cstat-no" title="statement not covered" >            return true;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        uint32[] memory arr = new uint32[](1);</span>
+<span class="cstat-no" title="statement not covered" >        arr[0] = 0</span>;
+<span class="cstat-no" title="statement not covered" >        (bool success, ) = address(oracle).staticcall(abi.encodeWithSelector(OracleTest.observe.selector, arr));</span>
+<span class="cstat-no" title="statement not covered" >        return success;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function checkTwoAdjacentObservationsTickCumulativeModTimeElapsedAlways0(uint16 index) external view {</span>
+<span class="cstat-no" title="statement not covered" >        uint16 cardinality = oracle.cardinality();</span>
+        // check that the observations are initialized, and that the index is not the oldest observation
+<span class="cstat-no" title="statement not covered" >        require(index &lt; cardinality &amp;&amp; index != (oracle.index() + 1) % cardinality)</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        (uint32 blockTimestamp0, int56 tickCumulative0, , bool initialized0) =</span>
+            oracle.observations(index == 0 ? cardinality - 1 : index - 1);
+<span class="cstat-no" title="statement not covered" >        (uint32 blockTimestamp1, int56 tickCumulative1, , bool initialized1) = oracle.observations(index);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        require(initialized0)</span>;
+<span class="cstat-no" title="statement not covered" >        require(initialized1)</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        uint32 timeElapsed = blockTimestamp1 - blockTimestamp0;</span>
+<span class="cstat-no" title="statement not covered" >        assert(timeElapsed &gt; 0)</span>;
+<span class="cstat-no" title="statement not covered" >        assert((tickCumulative1 - tickCumulative0) % timeElapsed == 0)</span>;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function checkTimeWeightedAveragesAlwaysFitsType(uint32 secondsAgo) external view {</span>
+<span class="cstat-no" title="statement not covered" >        require(initialized)</span>;
+<span class="cstat-no" title="statement not covered" >        require(secondsAgo &gt; 0)</span>;
+<span class="cstat-no" title="statement not covered" >        uint32[] memory secondsAgos = new uint32[](2);</span>
+<span class="cstat-no" title="statement not covered" >        secondsAgos[0] = secondsAgo</span>;
+<span class="cstat-no" title="statement not covered" >        secondsAgos[1] = 0</span>;
+<span class="cstat-no" title="statement not covered" >        (int56[] memory tickCumulatives, uint160[] memory secondsPerLiquidityCumulativeX128s) =</span>
+            oracle.observe(secondsAgos);
+&nbsp;
+        // compute the time weighted tick, rounded towards negative infinity
+<span class="cstat-no" title="statement not covered" >        int56 numerator = tickCumulatives[1] - tickCumulatives[0];</span>
+<span class="cstat-no" title="statement not covered" >        int56 timeWeightedTick = numerator / int56(secondsAgo);</span>
+<span class="cstat-no" title="statement not covered" >        if (numerator &lt; 0 &amp;&amp; numerator % int56(secondsAgo) != 0) {</span>
+            timeWeightedTick--;
+        }
+&nbsp;
+        // the time weighted averages fit in their respective accumulated types
+<span class="cstat-no" title="statement not covered" >        assert(timeWeightedTick &lt;= type(int24).max &amp;&amp; timeWeightedTick &gt;= type(int24).min)</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        uint256 timeWeightedHarmonicMeanLiquidity =</span>
+            (uint256(secondsAgo) * type(uint160).max) /
+                (uint256(secondsPerLiquidityCumulativeX128s[1] - secondsPerLiquidityCumulativeX128s[0]) &lt;&lt; 32);
+<span class="cstat-no" title="statement not covered" >        assert(timeWeightedHarmonicMeanLiquidity &lt;= type(uint128).max)</span>;
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 30 2025 10:48:47 GMT+1000 (Australian Eastern Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

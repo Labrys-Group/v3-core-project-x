@@ -120,6 +120,9 @@ contract UniswapV3Pool is IUniswapV3Pool, NoDelegateCall {
         tickSpacing = _tickSpacing;
 
         maxLiquidityPerTick = Tick.tickSpacingToMaxLiquidityPerTick(_tickSpacing);
+
+        // Automatically set a 20% protocol fee on pool deployment
+        slot0.feeProtocol = 5 + (5 << 4);
     }
 
     /// @dev Common checks for valid tick inputs.

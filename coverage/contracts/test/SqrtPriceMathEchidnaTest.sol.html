@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/test/SqrtPriceMathEchidnaTest.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">contracts/test/</a> SqrtPriceMathEchidnaTest.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/96</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/68</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/88</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier: UNLICENSED
+pragma solidity =0.7.6;
+&nbsp;
+import '../libraries/FullMath.sol';
+import '../libraries/SqrtPriceMath.sol';
+import '../libraries/FixedPoint96.sol';
+&nbsp;
+contract SqrtPriceMathEchidnaTest {
+<span class="fstat-no" title="function not covered" >    function mulDivRoundingUpInvariants(</span>
+        uint256 x,
+        uint256 y,
+        uint256 z
+    ) external pure {
+<span class="cstat-no" title="statement not covered" >        require(z &gt; 0)</span>;
+<span class="cstat-no" title="statement not covered" >        uint256 notRoundedUp = FullMath.mulDiv(x, y, z);</span>
+<span class="cstat-no" title="statement not covered" >        uint256 roundedUp = FullMath.mulDivRoundingUp(x, y, z);</span>
+<span class="cstat-no" title="statement not covered" >        assert(roundedUp &gt;= notRoundedUp)</span>;
+<span class="cstat-no" title="statement not covered" >        assert(roundedUp - notRoundedUp &lt; 2)</span>;
+<span class="cstat-no" title="statement not covered" >        if (roundedUp - notRoundedUp == 1) {</span>
+<span class="cstat-no" title="statement not covered" >            assert(mulmod(x, y, z) &gt; 0)</span>;
+        } else {
+<span class="cstat-no" title="statement not covered" >            assert(mulmod(x, y, z) == 0)</span>;
+        }
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getNextSqrtPriceFromInputInvariants(</span>
+        uint160 sqrtP,
+        uint128 liquidity,
+        uint256 amountIn,
+        bool zeroForOne
+    ) external pure {
+<span class="cstat-no" title="statement not covered" >        uint160 sqrtQ = SqrtPriceMath.getNextSqrtPriceFromInput(sqrtP, liquidity, amountIn, zeroForOne);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (zeroForOne) {</span>
+<span class="cstat-no" title="statement not covered" >            assert(sqrtQ &lt;= sqrtP)</span>;
+<span class="cstat-no" title="statement not covered" >            assert(amountIn &gt;= SqrtPriceMath.getAmount0Delta(sqrtQ, sqrtP, liquidity, true))</span>;
+        } else {
+<span class="cstat-no" title="statement not covered" >            assert(sqrtQ &gt;= sqrtP)</span>;
+<span class="cstat-no" title="statement not covered" >            assert(amountIn &gt;= SqrtPriceMath.getAmount1Delta(sqrtP, sqrtQ, liquidity, true))</span>;
+        }
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getNextSqrtPriceFromOutputInvariants(</span>
+        uint160 sqrtP,
+        uint128 liquidity,
+        uint256 amountOut,
+        bool zeroForOne
+    ) external pure {
+<span class="cstat-no" title="statement not covered" >        uint160 sqrtQ = SqrtPriceMath.getNextSqrtPriceFromOutput(sqrtP, liquidity, amountOut, zeroForOne);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (zeroForOne) {</span>
+<span class="cstat-no" title="statement not covered" >            assert(sqrtQ &lt;= sqrtP)</span>;
+<span class="cstat-no" title="statement not covered" >            assert(amountOut &lt;= SqrtPriceMath.getAmount1Delta(sqrtQ, sqrtP, liquidity, false))</span>;
+        } else {
+<span class="cstat-no" title="statement not covered" >            assert(sqrtQ &gt; 0)</span>; // this has to be true, otherwise we need another require
+<span class="cstat-no" title="statement not covered" >            assert(sqrtQ &gt;= sqrtP)</span>;
+<span class="cstat-no" title="statement not covered" >            assert(amountOut &lt;= SqrtPriceMath.getAmount0Delta(sqrtP, sqrtQ, liquidity, false))</span>;
+        }
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getNextSqrtPriceFromAmount0RoundingUpInvariants(</span>
+        uint160 sqrtPX96,
+        uint128 liquidity,
+        uint256 amount,
+        bool add
+    ) external pure {
+<span class="cstat-no" title="statement not covered" >        require(sqrtPX96 &gt; 0)</span>;
+<span class="cstat-no" title="statement not covered" >        require(liquidity &gt; 0)</span>;
+<span class="cstat-no" title="statement not covered" >        uint160 sqrtQX96 = SqrtPriceMath.getNextSqrtPriceFromAmount0RoundingUp(sqrtPX96, liquidity, amount, add);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (add) {</span>
+<span class="cstat-no" title="statement not covered" >            assert(sqrtQX96 &lt;= sqrtPX96)</span>;
+        } else {
+<span class="cstat-no" title="statement not covered" >            assert(sqrtQX96 &gt;= sqrtPX96)</span>;
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (amount == 0) {</span>
+<span class="cstat-no" title="statement not covered" >            assert(sqrtPX96 == sqrtQX96)</span>;
+        }
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getNextSqrtPriceFromAmount1RoundingDownInvariants(</span>
+        uint160 sqrtPX96,
+        uint128 liquidity,
+        uint256 amount,
+        bool add
+    ) external pure {
+<span class="cstat-no" title="statement not covered" >        require(sqrtPX96 &gt; 0)</span>;
+<span class="cstat-no" title="statement not covered" >        require(liquidity &gt; 0)</span>;
+<span class="cstat-no" title="statement not covered" >        uint160 sqrtQX96 = SqrtPriceMath.getNextSqrtPriceFromAmount1RoundingDown(sqrtPX96, liquidity, amount, add);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (add) {</span>
+<span class="cstat-no" title="statement not covered" >            assert(sqrtQX96 &gt;= sqrtPX96)</span>;
+        } else {
+<span class="cstat-no" title="statement not covered" >            assert(sqrtQX96 &lt;= sqrtPX96)</span>;
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (amount == 0) {</span>
+<span class="cstat-no" title="statement not covered" >            assert(sqrtPX96 == sqrtQX96)</span>;
+        }
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getAmount0DeltaInvariants(</span>
+        uint160 sqrtP,
+        uint160 sqrtQ,
+        uint128 liquidity
+    ) external pure {
+<span class="cstat-no" title="statement not covered" >        require(sqrtP &gt; 0 &amp;&amp; sqrtQ &gt; 0)</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        uint256 amount0Down = SqrtPriceMath.getAmount0Delta(sqrtQ, sqrtP, liquidity, false);</span>
+<span class="cstat-no" title="statement not covered" >        assert(amount0Down == SqrtPriceMath.getAmount0Delta(sqrtP, sqrtQ, liquidity, false))</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        uint256 amount0Up = SqrtPriceMath.getAmount0Delta(sqrtQ, sqrtP, liquidity, true);</span>
+<span class="cstat-no" title="statement not covered" >        assert(amount0Up == SqrtPriceMath.getAmount0Delta(sqrtP, sqrtQ, liquidity, true))</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        assert(amount0Down &lt;= amount0Up)</span>;
+        // diff is 0 or 1
+<span class="cstat-no" title="statement not covered" >        assert(amount0Up - amount0Down &lt; 2)</span>;
+    }
+&nbsp;
+    // ensure that chained division is always equal to the full-precision case for
+    // liquidity * (sqrt(P) - sqrt(Q)) / (sqrt(P) * sqrt(Q))
+<span class="fstat-no" title="function not covered" >    function getAmount0DeltaEquivalency(</span>
+        uint160 sqrtP,
+        uint160 sqrtQ,
+        uint128 liquidity,
+        bool roundUp
+    ) external pure {
+<span class="cstat-no" title="statement not covered" >        require(sqrtP &gt;= sqrtQ)</span>;
+<span class="cstat-no" title="statement not covered" >        require(sqrtP &gt; 0 &amp;&amp; sqrtQ &gt; 0)</span>;
+<span class="cstat-no" title="statement not covered" >        require((sqrtP * sqrtQ) / sqrtP == sqrtQ)</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        uint256 numerator1 = uint256(liquidity) &lt;&lt; FixedPoint96.RESOLUTION;</span>
+<span class="cstat-no" title="statement not covered" >        uint256 numerator2 = sqrtP - sqrtQ;</span>
+<span class="cstat-no" title="statement not covered" >        uint256 denominator = uint256(sqrtP) * sqrtQ;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        uint256 safeResult =</span>
+            roundUp
+                ? FullMath.mulDivRoundingUp(numerator1, numerator2, denominator)
+                : FullMath.mulDiv(numerator1, numerator2, denominator);
+<span class="cstat-no" title="statement not covered" >        uint256 fullResult = SqrtPriceMath.getAmount0Delta(sqrtQ, sqrtP, liquidity, roundUp);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        assert(safeResult == fullResult)</span>;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getAmount1DeltaInvariants(</span>
+        uint160 sqrtP,
+        uint160 sqrtQ,
+        uint128 liquidity
+    ) external pure {
+<span class="cstat-no" title="statement not covered" >        require(sqrtP &gt; 0 &amp;&amp; sqrtQ &gt; 0)</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        uint256 amount1Down = SqrtPriceMath.getAmount1Delta(sqrtP, sqrtQ, liquidity, false);</span>
+<span class="cstat-no" title="statement not covered" >        assert(amount1Down == SqrtPriceMath.getAmount1Delta(sqrtQ, sqrtP, liquidity, false))</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        uint256 amount1Up = SqrtPriceMath.getAmount1Delta(sqrtP, sqrtQ, liquidity, true);</span>
+<span class="cstat-no" title="statement not covered" >        assert(amount1Up == SqrtPriceMath.getAmount1Delta(sqrtQ, sqrtP, liquidity, true))</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        assert(amount1Down &lt;= amount1Up)</span>;
+        // diff is 0 or 1
+<span class="cstat-no" title="statement not covered" >        assert(amount1Up - amount1Down &lt; 2)</span>;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getAmount0DeltaSignedInvariants(</span>
+        uint160 sqrtP,
+        uint160 sqrtQ,
+        int128 liquidity
+    ) external pure {
+<span class="cstat-no" title="statement not covered" >        require(sqrtP &gt; 0 &amp;&amp; sqrtQ &gt; 0)</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        int256 amount0 = SqrtPriceMath.getAmount0Delta(sqrtQ, sqrtP, liquidity);</span>
+<span class="cstat-no" title="statement not covered" >        if (liquidity &lt; 0) <span class="cstat-no" title="statement not covered" >assert(amount0 &lt;= 0)</span>;</span>
+<span class="cstat-no" title="statement not covered" >        if (liquidity &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >            if (sqrtP == sqrtQ) <span class="cstat-no" title="statement not covered" >assert(amount0 == 0)</span>;</span>
+            else <span class="cstat-no" title="statement not covered" >assert(amount0 &gt; 0)</span>;
+        }
+<span class="cstat-no" title="statement not covered" >        if (liquidity == 0) <span class="cstat-no" title="statement not covered" >assert(amount0 == 0)</span>;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getAmount1DeltaSignedInvariants(</span>
+        uint160 sqrtP,
+        uint160 sqrtQ,
+        int128 liquidity
+    ) external pure {
+<span class="cstat-no" title="statement not covered" >        require(sqrtP &gt; 0 &amp;&amp; sqrtQ &gt; 0)</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        int256 amount1 = SqrtPriceMath.getAmount1Delta(sqrtP, sqrtQ, liquidity);</span>
+<span class="cstat-no" title="statement not covered" >        if (liquidity &lt; 0) <span class="cstat-no" title="statement not covered" >assert(amount1 &lt;= 0)</span>;</span>
+<span class="cstat-no" title="statement not covered" >        if (liquidity &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >            if (sqrtP == sqrtQ) <span class="cstat-no" title="statement not covered" >assert(amount1 == 0)</span>;</span>
+            else <span class="cstat-no" title="statement not covered" >assert(amount1 &gt; 0)</span>;
+        }
+<span class="cstat-no" title="statement not covered" >        if (liquidity == 0) <span class="cstat-no" title="statement not covered" >assert(amount1 == 0)</span>;</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getOutOfRangeMintInvariants(</span>
+        uint160 sqrtA,
+        uint160 sqrtB,
+        int128 liquidity
+    ) external pure {
+<span class="cstat-no" title="statement not covered" >        require(sqrtA &gt; 0 &amp;&amp; sqrtB &gt; 0)</span>;
+<span class="cstat-no" title="statement not covered" >        require(liquidity &gt; 0)</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        int256 amount0 = SqrtPriceMath.getAmount0Delta(sqrtA, sqrtB, liquidity);</span>
+<span class="cstat-no" title="statement not covered" >        int256 amount1 = SqrtPriceMath.getAmount1Delta(sqrtA, sqrtB, liquidity);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (sqrtA == sqrtB) {</span>
+<span class="cstat-no" title="statement not covered" >            assert(amount0 == 0)</span>;
+<span class="cstat-no" title="statement not covered" >            assert(amount1 == 0)</span>;
+        } else {
+<span class="cstat-no" title="statement not covered" >            assert(amount0 &gt; 0)</span>;
+<span class="cstat-no" title="statement not covered" >            assert(amount1 &gt; 0)</span>;
+        }
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getInRangeMintInvariants(</span>
+        uint160 sqrtLower,
+        uint160 sqrtCurrent,
+        uint160 sqrtUpper,
+        int128 liquidity
+    ) external pure {
+<span class="cstat-no" title="statement not covered" >        require(sqrtLower &gt; 0)</span>;
+<span class="cstat-no" title="statement not covered" >        require(sqrtLower &lt; sqrtUpper)</span>;
+<span class="cstat-no" title="statement not covered" >        require(sqrtLower &lt;= sqrtCurrent &amp;&amp; sqrtCurrent &lt;= sqrtUpper)</span>;
+<span class="cstat-no" title="statement not covered" >        require(liquidity &gt; 0)</span>;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        int256 amount0 = SqrtPriceMath.getAmount0Delta(sqrtCurrent, sqrtUpper, liquidity);</span>
+<span class="cstat-no" title="statement not covered" >        int256 amount1 = SqrtPriceMath.getAmount1Delta(sqrtLower, sqrtCurrent, liquidity);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        assert(amount0 &gt; 0 || amount1 &gt; 0)</span>;
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 30 2025 10:48:47 GMT+1000 (Australian Eastern Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

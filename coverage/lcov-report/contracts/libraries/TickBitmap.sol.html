@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/libraries/TickBitmap.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">contracts/libraries/</a> TickBitmap.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/19</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/6</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/3</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/19</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier: BUSL-1.1
+pragma solidity &gt;=0.5.0;
+&nbsp;
+import './BitMath.sol';
+&nbsp;
+/// @title Packed tick initialized state library
+/// @notice Stores a packed mapping of tick index to its initialized state
+/// @dev The mapping uses int16 for keys since ticks are represented as int24 and there are 256 (2^8) values per word.
+library TickBitmap {
+    /// @notice Computes the position in the mapping where the initialized bit for a tick lives
+    /// @param tick The tick for which to compute the position
+    /// @return wordPos The key in the mapping containing the word in which the bit is stored
+    /// @return bitPos The bit position in the word where the flag is stored
+<span class="fstat-no" title="function not covered" >    function position(int24 tick) private pure returns (int16 wordPos, uint8 bitPos) {</span>
+<span class="cstat-no" title="statement not covered" >        wordPos = int16(tick &gt;&gt; 8)</span>;
+<span class="cstat-no" title="statement not covered" >        bitPos = uint8(tick % 256)</span>;
+    }
+&nbsp;
+    /// @notice Flips the initialized state for a given tick from false to true, or vice versa
+    /// @param self The mapping in which to flip the tick
+    /// @param tick The tick to flip
+    /// @param tickSpacing The spacing between usable ticks
+<span class="fstat-no" title="function not covered" >    function flipTick(</span>
+        mapping(int16 =&gt; uint256) storage self,
+        int24 tick,
+        int24 tickSpacing
+    ) internal {
+<span class="cstat-no" title="statement not covered" >        require(tick % tickSpacing == 0)</span>; // ensure that the tick is spaced
+<span class="cstat-no" title="statement not covered" >        (int16 wordPos, uint8 bitPos) = position(tick / tickSpacing);</span>
+<span class="cstat-no" title="statement not covered" >        uint256 mask = 1 &lt;&lt; bitPos;</span>
+<span class="cstat-no" title="statement not covered" >        self[wordPos] ^= mask</span>;
+    }
+&nbsp;
+    /// @notice Returns the next initialized tick contained in the same word (or adjacent word) as the tick that is either
+    /// to the left (less than or equal to) or right (greater than) of the given tick
+    /// @param self The mapping in which to compute the next initialized tick
+    /// @param tick The starting tick
+    /// @param tickSpacing The spacing between usable ticks
+    /// @param lte Whether to search for the next initialized tick to the left (less than or equal to the starting tick)
+    /// @return next The next initialized or uninitialized tick up to 256 ticks away from the current tick
+    /// @return initialized Whether the next tick is initialized, as the function only searches within up to 256 ticks
+<span class="fstat-no" title="function not covered" >    function nextInitializedTickWithinOneWord(</span>
+        mapping(int16 =&gt; uint256) storage self,
+        int24 tick,
+        int24 tickSpacing,
+        bool lte
+    ) internal view returns (int24 next, bool initialized) {
+<span class="cstat-no" title="statement not covered" >        int24 compressed = tick / tickSpacing;</span>
+<span class="cstat-no" title="statement not covered" >        if (tick &lt; 0 &amp;&amp; tick % tickSpacing != 0) compressed--;</span> // round towards negative infinity
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (lte) {</span>
+<span class="cstat-no" title="statement not covered" >            (int16 wordPos, uint8 bitPos) = position(compressed);</span>
+            // all the 1s at or to the right of the current bitPos
+<span class="cstat-no" title="statement not covered" >            uint256 mask = (1 &lt;&lt; bitPos) - 1 + (1 &lt;&lt; bitPos);</span>
+<span class="cstat-no" title="statement not covered" >            uint256 masked = self[wordPos] &amp; mask;</span>
+&nbsp;
+            // if there are no initialized ticks to the right of or at the current tick, return rightmost in the word
+<span class="cstat-no" title="statement not covered" >            initialized = masked != 0</span>;
+            // overflow/underflow is possible, but prevented externally by limiting both tickSpacing and tick
+<span class="cstat-no" title="statement not covered" >            next = initialized</span>
+                ? (compressed - int24(bitPos - BitMath.mostSignificantBit(masked))) * tickSpacing
+                : (compressed - int24(bitPos)) * tickSpacing;
+        } else {
+            // start from the word of the next tick, since the current tick state doesn't matter
+<span class="cstat-no" title="statement not covered" >            (int16 wordPos, uint8 bitPos) = position(compressed + 1);</span>
+            // all the 1s at or to the left of the bitPos
+<span class="cstat-no" title="statement not covered" >            uint256 mask = ~((1 &lt;&lt; bitPos) - 1);</span>
+<span class="cstat-no" title="statement not covered" >            uint256 masked = self[wordPos] &amp; mask;</span>
+&nbsp;
+            // if there are no initialized ticks to the left of the current tick, return leftmost in the word
+<span class="cstat-no" title="statement not covered" >            initialized = masked != 0</span>;
+            // overflow/underflow is possible, but prevented externally by limiting both tickSpacing and tick
+<span class="cstat-no" title="statement not covered" >            next = initialized</span>
+                ? (compressed + 1 + int24(BitMath.leastSignificantBit(masked) - bitPos)) * tickSpacing
+                : (compressed + 1 + int24(type(uint8).max - bitPos)) * tickSpacing;
+        }
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 30 2025 10:48:47 GMT+1000 (Australian Eastern Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

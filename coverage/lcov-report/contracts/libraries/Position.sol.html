@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for contracts/libraries/Position.sol</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">contracts/libraries/</a> Position.sol
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>0/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/8</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/2</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>0/15</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// SPDX-License-Identifier: BUSL-1.1
+pragma solidity &gt;=0.5.0 &lt;0.8.0;
+&nbsp;
+import './FullMath.sol';
+import './FixedPoint128.sol';
+import './LiquidityMath.sol';
+&nbsp;
+/// @title Position
+/// @notice Positions represent an owner address' liquidity between a lower and upper tick boundary
+/// @dev Positions store additional state for tracking fees owed to the position
+library Position {
+    // info stored for each user's position
+    struct Info {
+        // the amount of liquidity owned by this position
+        uint128 liquidity;
+        // fee growth per unit of liquidity as of the last update to liquidity or fees owed
+        uint256 feeGrowthInside0LastX128;
+        uint256 feeGrowthInside1LastX128;
+        // the fees owed to the position owner in token0/token1
+        uint128 tokensOwed0;
+        uint128 tokensOwed1;
+    }
+&nbsp;
+    /// @notice Returns the Info struct of a position, given an owner and position boundaries
+    /// @param self The mapping containing all user positions
+    /// @param owner The address of the position owner
+    /// @param tickLower The lower tick boundary of the position
+    /// @param tickUpper The upper tick boundary of the position
+    /// @return position The position info struct of the given owners' position
+<span class="fstat-no" title="function not covered" >    function get(</span>
+        mapping(bytes32 =&gt; Info) storage self,
+        address owner,
+        int24 tickLower,
+        int24 tickUpper
+    ) internal view returns (Position.Info storage position) {
+<span class="cstat-no" title="statement not covered" >        position = self[keccak256(abi.encodePacked(owner, tickLower, tickUpper))]</span>;
+    }
+&nbsp;
+    /// @notice Credits accumulated fees to a user's position
+    /// @param self The individual position to update
+    /// @param liquidityDelta The change in pool liquidity as a result of the position update
+    /// @param feeGrowthInside0X128 The all-time fee growth in token0, per unit of liquidity, inside the position's tick boundaries
+    /// @param feeGrowthInside1X128 The all-time fee growth in token1, per unit of liquidity, inside the position's tick boundaries
+<span class="fstat-no" title="function not covered" >    function update(</span>
+        Info storage self,
+        int128 liquidityDelta,
+        uint256 feeGrowthInside0X128,
+        uint256 feeGrowthInside1X128
+    ) internal {
+<span class="cstat-no" title="statement not covered" >        Info memory _self = self;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        uint128 liquidityNext;</span>
+<span class="cstat-no" title="statement not covered" >        if (liquidityDelta == 0) {</span>
+<span class="cstat-no" title="statement not covered" >            require(_self.liquidity &gt; 0, 'NP')</span>; // disallow pokes for 0 liquidity positions
+<span class="cstat-no" title="statement not covered" >            liquidityNext = _self.liquidity</span>;
+        } else {
+<span class="cstat-no" title="statement not covered" >            liquidityNext = LiquidityMath.addDelta(_self.liquidity, liquidityDelta)</span>;
+        }
+&nbsp;
+        // calculate accumulated fees
+<span class="cstat-no" title="statement not covered" >        uint128 tokensOwed0 =</span>
+            uint128(
+                FullMath.mulDiv(
+                    feeGrowthInside0X128 - _self.feeGrowthInside0LastX128,
+                    _self.liquidity,
+                    FixedPoint128.Q128
+                )
+            );
+<span class="cstat-no" title="statement not covered" >        uint128 tokensOwed1 =</span>
+            uint128(
+                FullMath.mulDiv(
+                    feeGrowthInside1X128 - _self.feeGrowthInside1LastX128,
+                    _self.liquidity,
+                    FixedPoint128.Q128
+                )
+            );
+&nbsp;
+        // update the position
+<span class="cstat-no" title="statement not covered" >        if (liquidityDelta != 0) <span class="cstat-no" title="statement not covered" >self.liquidity = liquidityNext</span>;</span>
+<span class="cstat-no" title="statement not covered" >        self.feeGrowthInside0LastX128 = feeGrowthInside0X128</span>;
+<span class="cstat-no" title="statement not covered" >        self.feeGrowthInside1LastX128 = feeGrowthInside1X128</span>;
+<span class="cstat-no" title="statement not covered" >        if (tokensOwed0 &gt; 0 || tokensOwed1 &gt; 0) {</span>
+            // overflow is acceptable, have to withdraw before you hit type(uint128).max fees
+<span class="cstat-no" title="statement not covered" >            self.tokensOwed0 += tokensOwed0</span>;
+<span class="cstat-no" title="statement not covered" >            self.tokensOwed1 += tokensOwed1</span>;
+        }
+    }
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Apr 30 2025 10:48:47 GMT+1000 (Australian Eastern Standard Time)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
