@@ -10,6 +10,10 @@ This repository contains the core smart contracts for the Uniswap V3 Protocol.
 For higher level contracts, see the [uniswap-v3-periphery](https://github.com/Uniswap/uniswap-v3-periphery)
 repository.
 
+## Protocol Fee
+
+A 20% protocol fee is enabled on all pool creation. This fee is collected by the protocol on swap transactions.
+
 ## Bug bounty
 
 This repository is subject to the Uniswap V3 bug bounty program, per the terms defined [here](./bug-bounty.md).
